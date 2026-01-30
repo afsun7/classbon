@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      this in next
-    </div>
+    <>
+      <div className="text-5xl ">React Application Architecture</div>
+    </>
   );
 }
