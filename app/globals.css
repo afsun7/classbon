@@ -91,3 +91,13 @@
     font-family: var(--font-figtree);
   }
 }
+
+@layer utilities {
+  .bg-hero-pattern {
+    background-image: url("/images/tile.svg");
+    background-size: auto;
+  }
+  .gradient {
+    @apply bg-gradient-to-r from-gradient-first to-gradient-second text-transparent bg-clip-text;
+  }
+}
