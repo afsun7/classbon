@@ -1,7 +1,9 @@
 export default function Home() {
   return (
     <>
-      <div className="text-5xl ">React Application Architecture</div>
+      <div className="text-5xl " lang="en">
+        React Application Architecture
+      </div>
     </>
   );
 }
