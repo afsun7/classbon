@@ -1,10 +1,10 @@
-"use client"; // because use want use usePathname for change style of active page
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { menuItems } from "./const/menu-list-header";
 
-export const TopNavigation: React.FC = () => {
+export const TopNavigation = () => {
   const pathname = usePathname();
 
   return (
