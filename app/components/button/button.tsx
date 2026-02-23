@@ -1,0 +1,53 @@
+"use client";
+import { Size } from "../types/size.type";
+import { clsx } from "clsx";
+import { ButtonProps, ButtonShape } from "./button.types";
+
+const sizeClasses: Record<Size, string> = {
+  tiny: "btn-xs",
+  small: "btn-sm",
+  normal: "",
+  large: "btn-lg",
+};
+
+const shapeClasses: Record<ButtonShape, string> = {
+  wide: "btn-wide",
+  full: "btn-block",
+  square: "btn-square",
+  default: "",
+};
+
+export const Button: React.FC<ButtonProps> = ({
+  variant,
+  size = "normal",
+  isDisabled = false,
+  isOutline = false,
+  shape = "default",
+  isLoading = false,
+  loadingType = "spinner",
+  loadingText = "در حال ارسال درخواست",
+  type = "button",
+  isLink = false,
+  children,
+  className,
+  animatedIcon = false,
+  ...rest
+}: ButtonProps) => {
+  const classes = clsx(
+    "btn",
+    className,
+    variant && `btn-${variant}`,
+    size && sizeClasses[size],
+    isOutline && "btn-outline",
+    isLink && "btn-link",
+    shape && shapeClasses[shape],
+    animatedIcon && "animated-icon",
+    isLoading && "pointer-events-none opacity-80"
+  );
+
+  return (
+    <button type={type} disabled={isDisabled} className={classes} {...rest}>
+      {isLoading ? loadingText : children}
+    </button>
+  );
+};

@@ -1,8 +1,10 @@
 @import "tailwindcss";
+@import "./tailwind/components/components.css";
 @custom-variant dark (&&:where(.dark, .dark *));
 
 :root {
   --clb-c-transparent: transparent;
+  --clb-c-black: oklch(0 0 0 / 1);
   --clb-c-white: oklch(0.98 0 0 / 1);
   --clb-c-primary: oklch(0.59 0.19 254.77 / 1);
   --clb-c-secondary: oklch(0.57 0.2 283.08 / 1);
@@ -50,6 +52,7 @@
   --color-*: initial;
   --color-current: var(--current);
   --color-transparent: var(--clb-c-transparent);
+  --color-black: var(--clb-c-black);
   --color-white: var(--clb-c-white);
   --color-primary: var(--clb-c-primary);
   --color-primary-focus: var(--clb-c-primary-focus);
