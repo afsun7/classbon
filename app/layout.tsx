@@ -11,9 +11,9 @@ export default function RootLayout({
 }>) {
   return (
     <html dir="rtl" className={`dark ${figtree.variable} ${vazir.variable}`}>
-      <body className=" grid grid-rows-[80px_1fr_auto] min-h-screen font-bold uppercase dark:bg-base-100 dark:text-base-content">
+      <body className=" grid grid-rows-[80px_1fr_auto] min-h-screen font-bold uppercase dark:bg-base-100 dark:text-base-content ">
         <Header />
-        <main> {children}</main>
+        <main className="container mx-auto"> {children}</main>
         <Footer />
       </body>
     </html>

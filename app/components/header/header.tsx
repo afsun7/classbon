@@ -3,8 +3,8 @@ import { TopNavigation } from "./top-navigation";
 
 export const Header = () => {
   return (
-    <header className="border-b dark:border-base-content dark:border-opacity-5">
-      <div className="container flex items-center justify-between mx-auto">
+    <header className="border-b dark:border-base-content/5 container mx-auto">
+      <div className="container flex items-center justify-between ">
         <Image
           src="/images/logo-light.svg"
           width={100}
