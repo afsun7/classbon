@@ -2,6 +2,7 @@ import { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CourseSummary } from "@/app/types/course-summary.interface";
+import { Badge } from "@/app/components/badge/badge";
 
 export const CourseCard: FC<CourseSummary> = ({
   coverImageId,
@@ -24,8 +25,10 @@ export const CourseCard: FC<CourseSummary> = ({
         />
       </figure>
       <div className="mt-2 flex gap-2 font-semibold dark:text-info px-3 py-2">
-        {recordStatus}
-        {level}
+        <Badge variant="info" className="">
+          {recordStatus}
+        </Badge>
+        <Badge variant="accent">{level}</Badge>
       </div>
       <div className="card-body">
         <Link href={`/course/${slug}`} className="card-title">
@@ -33,7 +36,7 @@ export const CourseCard: FC<CourseSummary> = ({
         </Link>
         <p>{subTitle}</p>
         <div className="flex items-center justify-between">
-          {duration}
+          <Badge variant="warning"> {duration}</Badge>
 
           {basePrice}
         </div>

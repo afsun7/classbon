@@ -1,5 +1,3 @@
-import React, { FC } from "react";
-
 import { CourseSummary } from "@/app/types/course-summary.interface";
 import { CourseCard } from "./course-card";
 
